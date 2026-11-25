@@ -138,7 +138,7 @@ if CommandLine.arguments.contains("--banner") {
               NSColor(srgbRed: 0.76, green: 0.79, blue: 0.87, alpha: 1), at: CGPoint(x: 54, y: 106))
 
         for (index, mark) in marks.enumerated() {
-            let x = 680.0 + Double(index) * 182
+            let x: CGFloat = 680 + CGFloat(index) * 182
             drawMark(mark, in: NSRect(x: x, y: 117, width: 140, height: 140))
             let font = NSFont.systemFont(ofSize: 21, weight: .semibold)
             let name = NSAttributedString(string: mark.name, attributes: [.font: font, .foregroundColor: mark.color])
